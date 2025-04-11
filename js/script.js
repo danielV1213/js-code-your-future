@@ -15,10 +15,16 @@ const cart = document.querySelector(".shopping-cart");
 // Functions
 
 // Function to toggle the 'active' class on the menu and its icon
-
+function toggleActiveMenu() {
+  navbarMenu.classList.toggle("active");
+  menuBtnIcon.classList.toggle("active");
+}
 
 // Function to show or hide the shopping cart and its background overlay
-
+function toggleCart() {
+  cartOverlay.classList.toggle("show-cart");
+  cart.classList.toggle("show-cart");
+}
 
 // Use of the JavaScript method "addEventListener" which allows executing a function
 // when the specified event occurs on the obtained HTML element
@@ -26,7 +32,8 @@ const cart = document.querySelector(".shopping-cart");
 // that will be executed when that event occurs
 
 // addEventListener to open or close the responsive menu
-
+menuBtn.addEventListener("click", toggleActiveMenu);
 
 // addEventListener to open or close the shopping cart
-
+cartOpenBtn.addEventListener("click", toggleCart);
+cartCloseBtn.addEventListener("click", toggleCart);
